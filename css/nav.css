@@ -4,6 +4,8 @@
   font-family: 'Crimson Pro', serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background-color:#000;
+  color: #fff;
 }
 .container-fluid{
 width: 100%;
@@ -13,9 +15,8 @@ img {
   width: 100vh;
   height: 100vh;
 }
-}
- h1, p{ 
-  color: #555;
+ h1, h3, h2, h4 , h5, p, button{ 
+  color: #fff;
   margin: 20px;
   padding: 20px;
   text-align: justify;
