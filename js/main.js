@@ -1,7 +1,5 @@
 AOS.init();
 
-
-
-function hello(){
-alert(" there are some cookies out here");
+window.onload = function() {
+ alert("let's go!");
 }
