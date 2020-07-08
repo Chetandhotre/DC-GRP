@@ -1,4 +1,7 @@
 AOS.init();
-Function hello(){
+
+
+
+function hello(){
 alert(" there are some cookies out here");
 }
