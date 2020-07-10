@@ -41,8 +41,171 @@
     <a href="#" class="btn btn-primary">more info</a>
   </div>
 </div>
+<div class="mt-3 px-2 mb-3">
+<p>  // function //
+
+function Temperature(high,low){
+    console.log("high");
+    console.log('low');
+}
+Temperature(45,23);
+ 
+ // just a function having var name //
+ 
+function Secx(){
+    console.log("hi here to heplp you out");
+    
+}
+console.log(Secx);
 
 
+ // objects //
+ 
+ var Car = {
+  type: 'model-X',
+  speed: 400,
+  name: 'tesla',
+  ShowType: function() {
+   console.log('type: ' + this.type);
+  },
+  Showname: function() {
+   console.log('name: ' + this.name);
+  },
+  ShowSpeed: function() {
+   this.speed = this.speed + 600;
+   console.log(this.speed + 'km/hr');
+  }
+ }
+ Car.ShowType();
+ Car.ShowSpeed();
+ Car.Showname();
+ 
+//class without method//
+ 
+ class Books {
+  constructor(name, Author, price) {
+   this.name = name;
+   this.Author = Author;
+   this.price = price;
+  }
+ }
+ var student1 = new Books("galvan valley", "mrdc", 4000);
+ var student2 = new Books("black Hole", "Drdc", 900);
+ 
+ console.log(student1);
+ console.log(student2);
+ 
+ 
+// class with method //
+ 
+// 1@  //
+
+ class Bank{
+    constructor( name,totalBalance,Amount,Remaining){
+        this.name = name;
+        this.totalBalance = totalBalance;
+        this.Amount = Amount;
+        this.Remaining = Remaining;
+    }
+    Withdraw(){
+        console.log('Name of Account holder :' + this.name );
+        console.log('Total balance:' + this.totalBalance);
+        console.log('Amount withdrawn :' +this.Amount );
+        console.log('Remaining balance :'+ this.Remaining);
+    }
+ }
+ var p1 = new Bank('amol dhotre', 1000 , 400 ,600);
+ 
+ console.log(p1.Withdraw());
+ console.log(p1.Bank); 
+ 
+
+ // 2@ //
+ 
+ class Movie {
+  constructor(type, name, ratings) {
+   this.type = type;
+   this.name = name;
+   this.ratings = ratings;
+  }
+  Play() {
+   console.log("type of movie was " + this.type);
+   console.log("name of movie was " + this.name);
+   console.log("it has rating of " + this.ratings);
+  }
+ }
+ var movie1 = new Movie("action", "boss", 5.9);
+ var movie2 = new Movie("comedy", "hera pheri", 8.9);
+ 
+ movie1.Play();
+ movie2.Play();
+ 
+ 
+// class with extends//
+
+// 1@  //
+
+class User {
+ constructor(name, email) {
+  this.name = name;
+  this.email = email;
+ }
+ Login() {
+  console.log('user logged in' + this.name + this.email);
+ }
+ Logout() {
+  console.log('user logged out' + this.name + this.email);
+ }
+}
+
+class Member extends User {
+ constructor(name, email, memberadmin) {
+  super(name, email);
+  this.memberadmin = memberadmin;
+ }
+ Registered() {
+  console.log(this.name +  '==>is subscribed to the' + this.memberadmin + '==> package');
+ }
+}
+var A = new Member('chetan', 'chetan@', 'master');
+var b = new Member('boss', 'boss@123');
+
+A.Registered();
+
+// 2@ //
+
+class Ac{
+    constructor(voltage,current,frequency){
+        this.voltage = voltage;
+        this.current = current;
+        this.frequency = frequency;
+    }
+    Getvalues(){
+        console.log(' voltage is'+this.voltage+'having current of'+this.current+'to the frequency of'+this.frequency);
+    }
+}
+
+// class has been extended //
+
+class Watt extends Ac{
+    constructor(voltage,current,frequency,wattnum){
+        super(voltage,current,frequency);
+        this.wattnum = wattnum;
+    }
+    Total(){
+        console.log('final wattage'+this.wattnum);
+    }
+}
+
+var reading1 = new Watt('240V','12A','50HZ','2880KW');
+var reading2 = new Watt('440','10','50','4440');
+
+reading1.Getvalues();
+reading2.Total();
+reading1.Total();
+</p>
+
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
